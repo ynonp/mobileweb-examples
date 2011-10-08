@@ -1,0 +1,11 @@
+div.box {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-color: blue;
+}
+
+div.container {
+    margin: 0 auto;
+    width: 300px;
+}

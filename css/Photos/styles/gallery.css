@@ -1,0 +1,7 @@
+img.thumb {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    margin: 1px;
+}

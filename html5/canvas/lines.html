@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lines</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    </head>
+
+    <body>
+        <canvas width="50" height="50" id="can" style="display:none"></canvas>
+        <img id="i1" />
+
+        <script>
+            var canvas = document.querySelector('#can');
+            var ctx    = canvas.getContext('2d');
+
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.strokeStyle = "hsl(249, 41%, 50%)";
+            ctx.lineWidth = 6;
+            ctx.moveTo(10, 10);
+            ctx.lineTo(30, 20);
+            ctx.lineTo(10, 30);
+            ctx.stroke();
+
+            document.querySelector("#i1").setAttribute('src', canvas.toDataURL());
+        </script>
+
+    </body>
+
+
+</html>
+

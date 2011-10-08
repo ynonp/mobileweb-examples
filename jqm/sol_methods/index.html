@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQM Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1">
+
+	<link rel="stylesheet" href="styles/jquery.mobile-1.0rc1.min.css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mobile-1.0rc1.min.js"></script>
+	<script type="text/javascript" src="scripts/app.js"></script>
+    </head>
+
+    <body> 
+    
+        <div data-role="page" id="menu">
+        
+	    <div data-role="header">
+		    <h1>Select Effect</h1>
+	    </div>
+    
+	    <div data-role="content">
+		<div data-role="fieldcontain">
+		    <fieldset data-role="controlgroup">
+			<legend>Gender</legend>
+			<input type="radio" id="slide" value="slide" name="fx" checked="checked" />
+			<label for="slide">Slide</label>
+			
+			<input type="radio" id="flip" value="flip" name="fx" />
+			<label for="flip">Flip</label>
+
+		    </fieldset>
+		</div>
+		<a id="btn-go" href="#" data-role="button">Go</a>
+	    </div>        
+        </div>
+	
+        <div data-role="page" id="content">
+        
+	    <div data-role="header">
+		    <h1>Welcome</h1>
+	    </div>
+    
+	    <div data-role="content">
+		<a href="#menu" data-role="button" data-direction="reverse">Back</a>
+	    </div>        
+        </div>
+	
+    </body>
+</html>
+    
+

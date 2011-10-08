@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="e7bd5f14-b1c3-4f4f-9e8e-c5d3ecb51b66" kpf_version="5" name="Photos.komodoproject">
+<file id="211c504a-0e8b-2f46-8056-6009cf7dd6e5" idref="e7bd5f14-b1c3-4f4f-9e8e-c5d3ecb51b66" name="index.html" url="index.html">
+</file>
+<livefolder id="6d001308-d8e9-954d-9c63-5947297ea68d" idref="e7bd5f14-b1c3-4f4f-9e8e-c5d3ecb51b66" name="img" url="img">
+</livefolder>
+<livefolder id="a39a9547-5898-e145-923f-d510c577a78d" idref="e7bd5f14-b1c3-4f4f-9e8e-c5d3ecb51b66" name="styles" url="styles">
+</livefolder>
+<livefolder id="d122b63a-ca0f-6447-8f4b-4912faa062ad" idref="e7bd5f14-b1c3-4f4f-9e8e-c5d3ecb51b66" name="scripts" url="scripts">
+</livefolder>
+</project>

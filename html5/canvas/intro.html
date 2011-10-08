@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Canvas</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    </head>
+
+    <body>
+        <canvas width="300" height="400" id="can" />
+
+        <script>
+            var canvas = document.querySelector('#can');
+            var ctx    = canvas.getContext('2d');
+
+            // now we can start drawing using ctx
+            ctx.font = "bold 24px sans-serif";
+            ctx.fillText("Hello World", 20, 20);
+        </script>
+
+    </body>
+
+
+</html>
+

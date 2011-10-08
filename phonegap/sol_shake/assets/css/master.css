@@ -1,0 +1,10 @@
+div#box {
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 50px;
+    background-color: red;
+}
+
+div#box.shaked {
+    background-color: blue;
+}

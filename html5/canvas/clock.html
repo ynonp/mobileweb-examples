@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exer 1</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0">
+
+    </head>
+
+    <body>
+        <canvas width="500" height="500" id="can" ></canvas>
+        <script>
+            var canvas = document.getElementById('can');
+            var ctx = canvas.getContext('2d');
+
+            ctx.translate(100, 100);
+
+            function drawClock(ctx, n, w, h) {
+                ctx.save();
+                ctx.lineWidth = w;
+                for ( var i=0; i < n; ++i ) {
+                    ctx.rotate(2 * Math.PI / n );
+                    ctx.beginPath();
+                    ctx.moveTo(0, 50);
+                    ctx.lineTo(0, 50 + h);
+                    ctx.stroke();
+                }
+                ctx.restore();
+            }
+
+
+            drawClock(ctx, 4, 2, 7);
+            drawClock(ctx, 12, 1, 5);
+            drawClock(ctx, 60, 0.5, 2);
+            
+        </script>
+
+    </body>
+
+
+</html>
+

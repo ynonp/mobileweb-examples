@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="e4656265-7f13-1d40-a82f-03e307b420cc" kpf_version="5" name="RedSpotter.komodoproject">
+<livefolder id="1b6104e0-198f-d347-ad7e-859d6508492d" idref="e4656265-7f13-1d40-a82f-03e307b420cc" name="scripts" url="scripts">
+</livefolder>
+<file id="3fec32cc-aed3-8344-b9c7-bd38d9b7a3b7" idref="e4656265-7f13-1d40-a82f-03e307b420cc" name="index.html" url="index.html">
+</file>
+<livefolder id="fcbb0d38-3bab-9043-8f99-8a9ec087b831" idref="e4656265-7f13-1d40-a82f-03e307b420cc" name="styles" url="styles">
+</livefolder>
+</project>

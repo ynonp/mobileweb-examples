@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="a9992165-9b45-484b-99b2-23c49eb18007" kpf_version="5" name="WorldClock.komodoproject">
+<livefolder id="448a0952-c6c7-e04c-9a43-53d5e3442035" idref="a9992165-9b45-484b-99b2-23c49eb18007" name="scripts" url="scripts">
+</livefolder>
+<livefolder id="550b9bec-addb-7745-b1aa-117375b8f9db" idref="a9992165-9b45-484b-99b2-23c49eb18007" name="styles" url="styles">
+</livefolder>
+<file id="b1989091-7039-7448-8883-784557ccc1fa" idref="a9992165-9b45-484b-99b2-23c49eb18007" name="index.html" url="index.html">
+</file>
+<livefolder id="ec5964b8-ac85-9b40-8de8-9092cf856a0c" idref="a9992165-9b45-484b-99b2-23c49eb18007" name="img" url="img">
+</livefolder>
+</project>

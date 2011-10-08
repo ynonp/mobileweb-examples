@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+# v1.0
+
+CACHE:
+index.html
+css/style.css
+images/perldancer-bg.jpg
+images/perldancer.jpg
+javascripts/jquery.js
+javascripts/app.js
+
+FALLBACK:
+/time /offline.html

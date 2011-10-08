@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="95e983e1-d89e-8847-9d0b-2e1b9d73689f" kpf_version="5" name="EchoSocket.komodoproject">
+<livefolder id="0d785c52-62cf-a24d-b110-4bfc7419c9d0" idref="95e983e1-d89e-8847-9d0b-2e1b9d73689f" name="scripts" url="scripts">
+</livefolder>
+<livefolder id="e38b8a1f-17de-2449-85ef-c812a43e47cc" idref="95e983e1-d89e-8847-9d0b-2e1b9d73689f" name="styles" url="styles">
+</livefolder>
+<file id="fe1ecd3c-a8f5-6d4f-89ea-492c2e1759cc" idref="95e983e1-d89e-8847-9d0b-2e1b9d73689f" name="index.html" url="index.html">
+</file>
+</project>

@@ -1,0 +1,16 @@
+div#img {
+    background-image:url(../img/iphone_black.png);
+    
+    height: 400px;
+    background-color: white;
+    width: 320px;
+    background-repeat: no-repeat;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5) {
+    /* high density devices */
+    div#img {
+        background-image:url(../img/iphone_white.png);
+        width: 600px;
+    }
+}

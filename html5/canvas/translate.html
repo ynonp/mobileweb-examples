@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exer 1</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0">
+
+    </head>
+
+    <body>
+        <canvas width="200" height="200" id="can" ></canvas>
+        <script>
+            var canvas = document.getElementById('can');
+            var ctx = canvas.getContext('2d');
+
+            function drawRect(ctx) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.fillRect(0, 0, 100, 100);
+                ctx.fillStyle = 'hsla(208, 93%, 50%, 0.45)';
+                ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            for ( var i=0 ;i < 2; ++i ) {
+                for ( var j=0; j < 2; ++j ) {
+                    ctx.save();
+                    ctx.translate(i * 100, j * 100);
+                    drawRect(ctx);
+                    ctx.restore();
+                }
+            }
+
+            </script>
+
+    </body>
+
+
+</html>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="12bb0fc4-5758-ee42-96fe-58c7e9374d55" kpf_version="5" name="DeviceInfo.komodoproject">
+<file id="32f09860-caf4-b74a-92e4-789289e6719d" idref="12bb0fc4-5758-ee42-96fe-58c7e9374d55" name="index.html" url="index.html">
+</file>
+<livefolder id="42c17d57-2a04-e144-9e09-3aa2fae3fc25" idref="12bb0fc4-5758-ee42-96fe-58c7e9374d55" name="assets" url="assets">
+</livefolder>
+<file id="b081cce7-183f-d242-8b29-cab91ebbedc3" idref="12bb0fc4-5758-ee42-96fe-58c7e9374d55" name="config.xml" url="config.xml">
+</file>
+<file id="f1015ddc-9b24-be4f-8cf6-e6074380f945" idref="12bb0fc4-5758-ee42-96fe-58c7e9374d55" name="icon.png" url="icon.png">
+</file>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="9978a488-269f-ab41-9b0e-dfa1def6e431" kpf_version="5" name="cards.komodoproject">
+<livefolder id="29a6de23-86d8-6f4d-8938-9ee997fac22d" idref="9978a488-269f-ab41-9b0e-dfa1def6e431" name="styles" url="styles">
+</livefolder>
+<livefolder id="5d5d492a-4f36-5548-a800-b9eda1f1902c" idref="9978a488-269f-ab41-9b0e-dfa1def6e431" name="scripts" url="scripts">
+</livefolder>
+<file id="a630acfe-98e6-5848-9c89-9db2fbf82e30" idref="9978a488-269f-ab41-9b0e-dfa1def6e431" name="index.html" url="index.html">
+</file>
+</project>

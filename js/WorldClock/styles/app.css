@@ -1,0 +1,20 @@
+div.clock {
+    height: 420px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+div.clock-display {
+    width: 200px;
+    margin: 50px auto;
+    border: 2px solid blue;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 2em;
+    display: none;
+    text-align: center;
+}

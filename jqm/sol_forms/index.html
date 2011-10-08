@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQM Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1">
+
+	<link rel="stylesheet" href="styles/jquery.mobile-1.0rc1.min.css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mobile-1.0rc1.min.js"></script>
+    </head>
+
+    <body> 
+	
+        <div data-role="page" id="basic">        
+	    <div data-role="header">
+		    <h1>Basic Details</h1>
+	    </div>
+    
+	    <div data-role="content">
+		<div data-role="fieldcontain">
+		    <label for="username">Username</label><input type="text" value="" />
+		    <label for="password">Password</label><input type="password" value="" />
+		</div>
+
+		<div data-role="fieldcontain">
+		    <label for="phone">Phone</label><input type="tel" value="" />
+		    <label for="email">Email</label><input type="email" value="" />
+		</div>
+		
+		<a href="#extra" data-role="button">Next</a>
+	    </div>	
+        </div>
+
+        <div data-role="page" id="extra">        
+	    <div data-role="header">
+		<h1>Extra Details</h1>		
+		<a href="#basic" data-role="button" data-direction="reverse">Back</a>
+	    </div>
+    
+	    <div data-role="content">		
+		<div data-role="fieldcontain">
+		    <fieldset data-role="controlgroup">
+			<legend>Gender</legend>
+			<input type="radio" id="gender_m" value="m" name="gender" checked="checked" />
+			<label for="gender_m">Male</label>
+			
+			<input type="radio" id="gender_f" value="f" name="gender" />
+			<label for="gender_f">Female</label>
+
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">
+		    <fieldset data-role="controlgroup">
+			<legend>Favorite Colors</legend>
+			<input type="checkbox" id="fav_red" value="red" name="color" />
+			<label for="fav_red">Red</label>
+			
+			<input type="checkbox" id="fav_blue" value="blue" name="color" />
+			<label for="fav_blue">Blue</label>
+
+			<input type="checkbox" id="fav_green" value="green" name="color" />
+			<label for="fav_green">Green</label>
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">
+		    <label for="comments">Comments</label>
+		    <textarea id="comments"></textarea>
+		</div>
+		
+		<a href="#" data-role="button" data-theme="b">Submit</a>
+	    </div>
+    
+        </div>
+
+    </body>
+</html>
+    
+

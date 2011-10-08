@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Rectangles</title>
+    </head>
+    
+    <body>
+        <canvas width="200" height="200">
+            Sorry, your browser does not support a canvas
+        </canvas>
+        
+        <script type="text/javascript">
+            (function() {
+                
+                var canvas = document.querySelector('canvas');
+                var ctx    = canvas.getContext('2d');
+                
+                ctx.fillRect(0, 0, 50, 50);
+                
+                ctx.fillStyle = 'red';
+                ctx.fillRect(50, 0, 50, 50);
+                ctx.fillRect(0, 50, 50, 50);
+                ctx.fillStyle = 'black';
+                ctx.fillRect(50, 50, 50, 50);
+            }());
+        </script>
+    </body>
+</html>

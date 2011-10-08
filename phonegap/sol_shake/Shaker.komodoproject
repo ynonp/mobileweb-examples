@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="d5deeb27-f60f-6245-8900-cbb6f8d6d882" kpf_version="5" name="Shaker.komodoproject">
+<file id="3a510e23-82ea-5a49-b41d-f85aa4bd94fb" idref="d5deeb27-f60f-6245-8900-cbb6f8d6d882" name="icon.png" url="icon.png">
+</file>
+<livefolder id="88817888-2350-2b47-9785-8b2d84a1c516" idref="d5deeb27-f60f-6245-8900-cbb6f8d6d882" name="assets" url="assets">
+</livefolder>
+<file id="e374fc26-e051-8043-a92b-d618332ca249" idref="d5deeb27-f60f-6245-8900-cbb6f8d6d882" name="index.html" url="index.html">
+</file>
+<file id="fb0f523f-71c3-d447-b81e-30916dea2323" idref="d5deeb27-f60f-6245-8900-cbb6f8d6d882" name="config.xml" url="config.xml">
+</file>
+</project>

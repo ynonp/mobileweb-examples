@@ -1,0 +1,7 @@
+div#gallery div.img {
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 5px 0;
+}
+

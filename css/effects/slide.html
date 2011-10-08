@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=0" />
+        <title>Slide</title>
+
+        <style>
+            html, body { margin: 0; padding: 0; height: 100%; }
+
+            div.view {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                height: 100%;
+            }
+
+            div.page {
+                position: absolute;
+                background-color: orange;
+                height: 100%;
+                width: 100%;
+                -webkit-transition: all 0.5s;
+            }
+
+            div.page:nth-child(even) {
+                background-color: purple;
+            }
+
+            div.page.center {
+            }
+
+            div.page.right {
+                -webkit-transform: translate3d(100%, 0, 0);
+            }
+
+            div.page.left {
+                -webkit-transform: translate3d(-100%, 0, 0);
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="view">
+            <div class="page center"></div>
+            <div class="page right"></div>
+        </div>
+
+        <script>
+            document.querySelector('div.page').addEventListener('click', function() {
+                document.querySelector('div.page.right').className = 'page center';
+                document.querySelector('div.page.center').className = 'page left';
+            });
+
+        </script>
+
+
+    </body>
+
+</html>
+

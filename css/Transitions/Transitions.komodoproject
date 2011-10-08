@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="757d0e5e-f58e-ee40-bbcd-ea627fb225ba" kpf_version="5" name="Transitions.komodoproject">
+<livefolder id="1f3da6cf-9a4e-b744-b21f-e9e96a3cf263" idref="757d0e5e-f58e-ee40-bbcd-ea627fb225ba" name="scripts" url="scripts">
+</livefolder>
+<livefolder id="9c5cb3c4-0901-d240-a239-07e4c3679ddd" idref="757d0e5e-f58e-ee40-bbcd-ea627fb225ba" name="styles" url="styles">
+</livefolder>
+<file id="fa09ccc8-94e3-be4a-b63a-54b3334f5468" idref="757d0e5e-f58e-ee40-bbcd-ea627fb225ba" name="index.html" url="index.html">
+</file>
+</project>

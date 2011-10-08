@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lines</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    </head>
+
+    <body>
+        <canvas width="50" height="50" id="can"></canvas>
+
+        <script>
+            var canvas = document.querySelector('#can');
+            var ctx    = canvas.getContext('2d');
+
+            var partSize = Math.PI * 2 / 12;
+
+            for ( var i=0; i < 12; ++i ) {
+                ctx.arc(25, 25, 25, partSize * i, partSize * (i+1));
+                ctx.stroke();
+            }
+
+        </script>
+
+    </body>
+
+
+</html>
+

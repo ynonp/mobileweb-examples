@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Filters</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    </head>
+
+    <body>
+
+        <img id="orig" src="mozilla.jpg" width="320" height="309" />
+        <button id="gray">Grayscale</button>
+
+        <script src="filters.js"></script>
+        <script>
+            window.onload = function() {
+                var btn = document.getElementById('gray');
+                btn.addEventListener('click', function() {
+                    var img = document.getElementById('orig');
+                    window.Filters.filterImageElement(img, window.Filters.grayscale);
+                }, false);
+            };
+
+        </script>
+
+    </body>
+
+
+</html>
+
