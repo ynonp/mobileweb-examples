@@ -1,0 +1,27 @@
+div.header-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+div.view {
+    width: 100%;
+    
+    margin: 0 0 0 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+div.group-wrapper {
+    position:relative;
+    top: 44px;
+    
+    height: 100%;
+    overflow: hidden;
+}
