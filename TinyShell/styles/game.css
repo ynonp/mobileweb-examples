@@ -1,0 +1,74 @@
+@-webkit-keyframes flash-up-down {
+    0%   { top: 0; }
+    40%  { top: -35px; }
+    70%  { top: -35px; }
+    100% { top: 0; }
+}
+
+@-webkit-keyframes move-right-1 {
+    0%   { -webkit-transform: translate(0, 0) }
+    100% { -webkit-transform: translate(90px, 0) }
+}
+
+@-webkit-keyframes move-left-1 {
+    0%   { -webkit-transform: translate(0, 0) }
+    100% { -webkit-transform: translate(-90px, 0) }
+}
+
+@-webkit-keyframes move-right-2 {
+    0%   { -webkit-transform: translate(0, 0) }
+    100% { -webkit-transform: translate(180px, 0) }
+}
+
+@-webkit-keyframes move-left-2 {
+    0%   { -webkit-transform: translate(0, 0) }
+    100% { -webkit-transform: translate(-180px, 0) }
+}
+
+.move-right-1 { -webkit-animation: move-right-1 0.5s 1; }
+.move-left-1  { -webkit-animation: move-left-1 0.5s 1; }
+
+.move-right-2 { -webkit-animation: move-right-2 0.5s 1; }
+.move-left-2  { -webkit-animation: move-left-2 0.5s 1; }
+
+.flash-up-down {
+    -webkit-animation: flash-up-down 1s 2;
+}
+
+.shell {
+    width: 90px;
+    height: 42px;
+    
+    background: url(../img/shell.png) no-repeat;
+    position: absolute;
+    z-index: 2;
+}
+
+.shell:nth-child(1) { left: 0 }
+.shell:nth-child(2) { left: 90px; }
+.shell:nth-child(3) { left: 180px; }
+
+.ball.first { left: 22px; }
+.ball.second { left: 112px; }
+.ball.third { left: 202px; }
+
+.ball {
+    width: 16px;
+    height: 16px;
+    
+    background: purple;
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.game-container {
+    position: relative;
+    
+    width: 250px;
+    margin: 150px auto;
+}
