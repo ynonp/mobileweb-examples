@@ -32,7 +32,9 @@
 
     store.init = function() {
         var data = global.localStorage.getItem("contacts");
-        store.contacts = JSON.parse(data);
+        if ( data ) {
+            store.contacts = JSON.parse(data);
+        }
     };
 
     global.store = store;
