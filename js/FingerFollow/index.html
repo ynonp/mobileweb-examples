@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Finger Follow</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
+    
+    <link rel="stylesheet" href="styles/main.css" />
+    <style>
+        div.critter {
+            margin-top: 50px; height: 70px; width: 70px; background: blue; border-radius: 35px;
+            position: absolute;
+            left: 0;
+        }
+        div.critter:nth-child(1) { top: 30px; }
+        div.critter:nth-child(2) { top: 100px; }
+        div.critter:nth-child(3) { top: 170px; }
+        
+    </style>
+</head>
+
+<body>
+    <div class="view">
+        <div class="header-wrapper">
+            <h1>Web App Header</h1>
+        </div>
+        
+        <div class="group-wrapper">
+            <div class="critter"></div>
+            <div class="critter"></div>
+            <div class="critter"></div>
+        </div>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
