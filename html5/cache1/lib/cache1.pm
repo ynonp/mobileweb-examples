@@ -11,7 +11,6 @@ get '/' => sub {
 };
 
 get '/manifest' => sub {
-#    send_file('foo.appcache', content_type => 'text/cache-manifest');
     send_file('full.appcache', content_type => 'text/cache-manifest');
 };
 

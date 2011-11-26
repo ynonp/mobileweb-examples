@@ -1,0 +1,20 @@
+Part 1. Server starter code is provided in the ex directory
+
+1. Implement a login form with username and password that validates against a server
+
+Part 2. Use pure.js / mustache.js for the following:
+
+2. Prefill a form with user's data (/ex2/user)
+3. Prefill a form with complex user's data (/ex3/user)
+4. Provide a way to change the data and post back to the server. Use HTTP GET
+   to fetch and HTTP POST to change data (/ex4/user)
+
+5. Write an app that shows a list of colors fetched from the server.
+   Create a refresh button that reloads the list (/ex5/colors)
+
+6. Implement a simple high score library in JS to use: 
+JS should provide the following functions:
+    setHighScore(player, score);
+    getTop10(); // returns the top 10 player/score pairs
+
+Write an app to use the library. 

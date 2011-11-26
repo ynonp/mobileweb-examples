@@ -28,7 +28,7 @@
                 shake = true;
             }
 
-            if ( ( ! isNaN(change_z) ) && ( change_y > 4.5 ) ) {
+            if ( ( ! isNaN(change_z) ) && ( change_z > 4.5 ) ) {
                 shake = true;
             }
             
@@ -48,7 +48,8 @@
         
         /** PUBLIC FUNCTIONS **/
         that.start = function() {            
-            that.watch_id = navigator.accelerometer.watchAcceleration(onMotion, onError, { frequency : 100 });
+            that.watch_id = navigator.accelerometer.watchAcceleration(
+                                    onMotion, onError, { frequency : 100 });
             that.onShake = onShake;
         }
         
