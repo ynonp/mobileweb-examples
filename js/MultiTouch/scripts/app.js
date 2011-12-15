@@ -11,8 +11,9 @@
         touches = e.touches;
       }, false);
             
-      setInterval(function() {
+      var watchid = setInterval(function() {
         console.log('touches = ' + touches.length);
+        
         for ( var i=0, len = touches.length; i < len; ++i ) {
             
             var touch = touches[i];

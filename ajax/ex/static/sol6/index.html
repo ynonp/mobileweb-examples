@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQM Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1">
+
+	<link rel="stylesheet" href="styles/jquery.mobile-1.0rc1.min.css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mobile-1.0rc1.min.js"></script>
+    </head>
+
+    <body> 
+    
+        <div data-role="page" id="foo">
+	    <div data-role="fieldcontain">
+		<label for="name">Username:</label>
+		<input type="text" name="name" id="name" value=""  />
+	    </div>
+	    <div data-role="fieldcontain">
+		<label for="score">Score:</label>
+		<input type="text" name="score" id="score" value=""  />
+	    </div>
+	    <a href="#" id="btn-send" data-role="button">Send</a>
+	    <a href="#" id="btn-refresh" data-role="button">Refresh</a>
+	    
+	    <ul data-role="listview"></ul>
+	</div>
+	    
+        </div>
+	
+	<script src="scripts/mustache.js"></script>
+	<script src="app.js"></script>
+	
+    </body>
+</html>
+    
+

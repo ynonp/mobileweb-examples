@@ -20,3 +20,17 @@ get '/tod' do
     'min'   => now.min,
     'sec'   => now.sec}.to_json
 end
+
+get '/tod.xml' do
+  now = Time.new
+  content_type :json
+  
+  return {
+    'time'  => now.to_s,
+    'year'  => now.year,
+    'month' => now.month,
+    'day'   => now.day,
+    'hour'  => now.hour,
+    'min'   => now.min,
+    'sec'   => now.sec}.to_xml
+end
