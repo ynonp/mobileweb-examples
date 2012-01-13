@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head></head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" 
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <defs>
+                <path id="path1" d="M0,0 A40,40 0 0,0 100,0 A40,40 0 0,0 0,0" fill="none" stroke="red"/>
+            </defs>
+            <g transform='translate(200,200),scale(3)'>
+                <g>
+                    <text font-size=1.2em transform='translate(-50,0)'>
+                        <textPath xlink:href="#path1">The five boxing wizards jump quickly</textPath>
+                    </text>
+                    <animateTransform attributeName='transform' type='rotate' from=0 to=360 dur='10s' repeatCount='indefinite' />
+                </g>
+            </g>
+        </svg>
+    </body>
+</html>

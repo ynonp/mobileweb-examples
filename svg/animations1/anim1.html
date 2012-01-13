@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
+            <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
+            <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
+            </circle>
+        </svg>
+        <button>Toggle</button>
+    </body>
+    <script>
+        var paused = true;
+        var btn = document.querySelector('button');
+        var circle = document.querySelector('circle');
+
+
+        btn.addEventListener('click', function() {
+        if ( paused ) {
+            var motion = document.createElementNS("http://www.w3.org/2000/svg", "animateMotion");
+            motion.setAttribute('path', 'M 0 0 H 300 Z');
+            motion.setAttribute('dur', '3s');
+            motion.setAttribute('repeatCount', 'indefinite');
+            circle.appendChild(motion);
+            console.log(motion);
+        } else {
+            while( circle.childNodes.length >= 1 ) {
+                circle.removeChild(circle.firstChild);
+            }
+        }
+
+        paused = ! paused;
+
+        }, false);
+
+    </script>
+</html>
