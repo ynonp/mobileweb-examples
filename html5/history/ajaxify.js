@@ -1,12 +1,16 @@
 /*global $ */
 
 (function(global) {
-  var ajaxify_link, ajaxify_all_links;
+  var ajaxify_link, ajaxify_all_links, handle_load_success;
+
+	handle_load_success = function() {
+		ajaxify_all_links();
+	};
 
   ajaxify_link = function($el, container_selector) {
     var href = $el.attr('href');
     $el.click(function(e) {
-      $(container_selector).load(href + ' #' + container_selector, ajaxify_all_links);
+      $(container_selector).load(href + ' #' + container_selector, handle_load_success);
       e.preventDefault();
     });
   };
