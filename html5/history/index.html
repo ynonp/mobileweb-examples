@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>History API FTW</title>
+        <style>
+            html { height: 100% }
+            body { height: 100% }
+            textarea {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 44px;
+                right: 0;
+                font-size: 4em;
+                border: 0;
+                resize: none;
+                height: 90%;
+            }
+            button {
+                position: absolute;
+                bottom: 10px;
+                left: 35%;
+                width: 30%;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <textarea id="text"></textarea>
+        <button id="save">Push On Stack</button>
+
+        <script>
+            window.onload = function() {
+                btn = document.getElementById('save');
+                text = document.getElementById('text');
+
+                window.addEventListener('popstate', function(e) {
+                    console.dir(e);
+                    if ( e.state && e.state.text ) {
+                        text.value = e.state.text;
+                        } else {
+                        text.value = 'Welcome To History Walker';
+                    }
+                });
+
+                btn.addEventListener('click', function(e) {
+                    var state = { text : text.value };
+                    console.log('push state: ');
+                    console.dir(state);
+                    window.history.pushState(state, '', '');
+                }, false);
+            };
+
+        </script>
+
+    </body>
+</html>
+
