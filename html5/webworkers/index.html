@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Worker Example</title>
+  </head>
+
+  <body>
+      <form oninput="result.value=workers.value">
+          <input type="range" id="workers-count" value="2" name="workers"/>
+          <output name="result">2</output>
+          <label for="time">Calculation Time</label>
+          <output name="time" id="time"></output>
+      </form>
+      <div id="workers">
+      </div>
+
+      <button id="btn-start-normal">Calculate Without Workers</button>
+      <button id="btn-start-workers">Calculate With Webworkers</button>
+
+      <!-- Scripts -->
+      <script src="libs/jquery.min.js"></script>
+      <script src="libs/mustache.js"></script>
+      <script src="script.js"></script>
+
+      <script type="text/template" id="worker-result-line">
+          <input type="text" class="result" readonly />
+      </script>
+
+  </body>
+</html>
