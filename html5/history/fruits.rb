@@ -13,6 +13,9 @@ page = <<-eos
           <img src="<%= @image_name %>" alt="<%= @image_desc %>" width="300" height="300" />
           <a href="<%= @next_url %>">Next</a>
         </div>
+        <div>
+          Page Loaded At: <%= Time.now.tv_usec %>
+        </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script src="ajaxify.js"></script>
       </body>
