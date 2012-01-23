@@ -4,8 +4,6 @@ use DateTime;
 
 our $VERSION = '0.1';
 
-mime->add_type( manifest => 'text/cache-manifest');
-
 get '/' => sub {
     send_file 'index.html';
 };

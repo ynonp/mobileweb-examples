@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# v1.0
+# v1.1
 
 CACHE:
 index.html
@@ -10,5 +10,5 @@ images/perldancer.jpg
 javascripts/jquery.js
 javascripts/app.js
 
-FALLBACK:
-/time /offline.html
+NETWORK
+time
