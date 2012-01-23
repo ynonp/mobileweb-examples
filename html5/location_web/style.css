@@ -1,0 +1,5 @@
+div#map {
+    height: 200px;
+    width: 200px;
+    border: 2px solid blue;
+}
