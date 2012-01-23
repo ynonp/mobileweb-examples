@@ -16,10 +16,15 @@
     };
 
     var WorkerView = function($el) {
-        var that = {};
+        var that = { workers: [] };
 
         that.set_workers = function() {
             var workers_count = Number($('#workers-count').val());
+            
+            for ( var i=0; i < that.workers.length; ++i ) {
+                that.workers[i].terminate();
+            }
+            
             that.workers = [];
 
             for ( var i=0; i < workers_count; ++i ) {
@@ -30,7 +35,7 @@
 
         that.render = function() {
             var template =  '{{#workers}}' +
-                            $('#worker-result-line').html() +
+                              $('#worker-result-line').html() +
                             '{{/workers}}';
 
             var html = Mustache.render(template, that);
@@ -51,7 +56,7 @@
          * As long as the browser is calculating, no other task
          * can be performed and the UI is frozen.
          */
-        $('#btn-start-normal').click(function(e) {
+        $('#btn-start-normal').click(function(e) {            
             var result_boxes = $('input.result');
             var t0 = new Date();
 
@@ -79,6 +84,7 @@
          *    field in the event object
          */
         $('#btn-start-workers').click(function(e) {
+            wv.set_workers();
             var result_boxes = $('input.result');
             var t0 = new Date();
             var handle_result = function(e) {

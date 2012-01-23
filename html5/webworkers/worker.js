@@ -19,7 +19,7 @@
     addEventListener('message', function(e) {
         var data = e.data;
         var count = data.count;
-
+        
         for (var i=fib.length; i < count; ++i ) {
             fib[i] = fib[i-1] + fib[i-2];
         }
