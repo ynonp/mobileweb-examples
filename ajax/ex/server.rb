@@ -4,10 +4,12 @@ require 'json'
 set :public_folder, File.dirname(__FILE__) + "/static"
 
 post '/ex1/login' do
+    content_type :json
     user = params[:username]
     pwd  = params[:password]
-
-    return (user == 'ali' && pwd == 'baba').to_s
+    
+    ok = (user == 'ali' && pwd == 'baba')
+    return { :ok => ok }.to_json;
 end
 
 get '/ex2/user' do
