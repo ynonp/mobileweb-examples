@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Numbers</title>
+    <meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Numbers</h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="slider">Slider:</label>
+                <input type="range" name="slider" id="slider" value="50" min="0" max="100" data-highlight="true"  />
+            </div>
+
+            <button id="save">Save</button>
+            <button id="restore">Restore</button>
+        </div>
+    </div>
+
+    <script src="state.js"></script>
+</body>
+</html>

@@ -1,5 +1,8 @@
 (function() {
-    var images = ['img/veg1.jpg', 'img/veg2.jpg', 'img/veg3.jpg', 'img/veg4.jpg'];
+    var images = ['img/veg1.jpg',
+                  'img/veg2.jpg',
+                  'img/veg3.jpg',
+                  'img/veg4.jpg'];
 
     $(function() {
 
