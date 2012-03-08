@@ -8,12 +8,9 @@
 (function() {
 
     var Names = [
-        'Bob',
-        'Mike',
-        'Tim',
-        'Ezra'
+        { name: 'Bob', email: 'spunge@bob.com'},
+        { name: 'Buffy', email: 'vampireslayer@hell.com'},
     ];
-   
 
     var nameString = localStorage.getItem('contacts');
     if ( nameString != null ) {
@@ -25,8 +22,13 @@
         var list = '<ul data-role="listview">';
 
         for ( var i=0; i < Names.length; i ++ ) {
-            var name = Names[i];
-            var text = '<li>' + name + '</li>';
+            var  contact_info = Names[i];
+            var text = '<li>' +
+                    '<a href="#view" contact-id="' + String(i) + '">' +
+                        contact_info.name  +
+                    '</a>' +
+                '</li>';
+
             list += text;
         }
 
@@ -34,10 +36,23 @@
 
         $('#index-list').html(list);
         $('#index-list ul').listview();
+
+        $('#index-list ul li a').bind('click', function() {
+            var contact_id = Number($(this).attr('contact-id'));
+            render_contact_to_view(contact_id);
+        });
     };
 
     var add = function() {
-        Names.push($('#contact-name').val());
+        var name  = $('#contact-name').val();
+        var email = $('#contact-mail').val();
+
+        var contact_info = {
+            name: name,
+            email: email
+        };
+
+        Names.push(contact_info);
         $.mobile.changePage('#index');
 
         var namesString = JSON.stringify(Names);
@@ -45,7 +60,16 @@
     };
 
 
+    var render_contact_to_view = function(contact_id) {
+        var contact_info = Names[contact_id];
+
+        $('#view-name').html(contact_info.name);
+        $('#view-email').html(contact_info.email);
+    };
+
+
     $('#save').bind('click', add);
     $('#index').bind('pagebeforeshow', render);
+
 
 }());

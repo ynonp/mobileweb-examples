@@ -6,12 +6,27 @@
     
     <body>
         <div id="container"></div>
-                
+        <button>Refresh</button>
+        
         <script type="text/x-handlebars-template" id="tmpl-entry">
             <div class="entry">
                 <h1>{{name}}</h1>
                 <span>{{details}}</span>                
             </div>
+        </script>
+        
+        <script type="text/template" id="tmpl-people">
+            <ul>
+            
+                {{#each people}}
+                <li>
+                    <span style="background:{{this.color}}">
+                        {{this.name}}
+                    </span>
+                </li>
+                {{/each}}
+            
+            </ul>
         </script>
         
         <script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script>

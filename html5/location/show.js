@@ -10,7 +10,7 @@
             center           : latlng,
             disableDefaultUI : true,
             scaleControl     : true,
-            mapTypeId        : ns.MapTypeId.SATELLITE
+            mapTypeId        : ns.MapTypeId.ROADMAP
         };
 
         map = new ns.Map(document.getElementById("map"), opts);
@@ -60,7 +60,10 @@
 
     function refreshLocation() {
         if ( typeof window.navigator.geolocation !== 'undefined' ) {
-            window.navigator.geolocation.getCurrentPosition(success, error);
+            window.navigator.geolocation.getCurrentPosition(success, error,
+                                                            {
+                                                                enableHighAccuracy: true
+                                                            });
         }
     }
 

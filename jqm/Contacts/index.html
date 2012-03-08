@@ -26,9 +26,28 @@
     </div>
 
     <div data-role="content">
-        <input type="text" id="contact-name" />
+        <label for="name">Name</label>
+        <input type="text" id="contact-name" name="name"/>
+
+        <label for="email">Email</label>
+        <input type="email" id="contact-mail" name="email"/>
         <button id="save">Save</button>
         <button id="cancel">Cancel</button>
+    </div>
+</div>
+
+<div data-role="page" id="view">
+    <div data-role="header">
+        <a href="#index">Home</a>
+        <h1>View Details</h1>
+    </div>
+
+    <div data-role="content">
+        <label for="name">Name</label>
+        <span id="view-name"></span>
+
+        <label for="email">Email</label>
+        <span id="view-email"></span>
     </div>
 </div>
 
