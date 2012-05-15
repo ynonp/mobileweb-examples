@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Image Filters</title>
+    <link rel="stylesheet" href="docs/assets/css/bootstrap.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="app/cutsom_filters.js"></script>
+
+    <script type="text/javascript" src="pixastic.core.js"></script>
+    <script type="text/javascript" src="pixastic.jquery.js"></script>
+    <script type="text/javascript" src="actions/blur.js"></script>
+    <script type="text/javascript" src="actions/emboss.js"></script>
+    <script type="text/javascript" src="actions/invert.js"></script>
+
+    <script src="app/pixastic_filters.js"></script>
+    <style>
+        canvas {
+            border: 2px solid blue;
+        }
+
+        .container { width: 960px; margin: 20px auto; }
+
+        .buttons    { padding: 10px; margin-top: 10px;}
+        .buttons h3 { float: left; margin-right: 20px; }
+        .buttons button { margin-right: 10px;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas width="500" height="364"></canvas>
+        <div class="buttons well">
+            <h3>Custom Filters</h3>
+            <button id="btn-reset">Reset</button>
+            <button id="btn-bw">Grayscale</button>
+            <button id="btn-frame">Add Frame</button>
+        </div>
+
+        <div class="buttons well">
+            <h3>Pixastic Filters</h3>
+            <button id="btn-pix-blur">Blur</button>
+            <button id="btn-pix-emboss">Emboss</button>
+            <button id="btn-pix-invert">Invert</button>
+        </div>
+    </div>
+
+</body>
+</html>
