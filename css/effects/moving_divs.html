@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+       div { height: 100px; }
+
+       div.c {
+           width:100%;
+           overflow:hidden;
+           position: relative;
+       }
+
+       div.c div:nth-child(1) {
+           background:red;
+       }
+
+       div.c div:nth-child(2) {
+           background: yellow;
+       }
+
+       div.c div:nth-child(3) {
+           background: green;
+       }
+       div.c div {
+           position: absolute;
+           width:100%;
+           -webkit-transition: all 1s;
+       }
+
+       div.c.left-0 div:nth-child(1) {
+           left: 0%;
+       }
+
+       div.c.left-0 div:nth-child(2) {
+           left: 100%;
+       }
+
+       div.c.left-0 div:nth-child(3) {
+           left: 200%;
+       }
+       div.c.left-1 div:nth-child(1) {
+           left: -100%;
+       }
+
+       div.c.left-1 div:nth-child(2) {
+           left: 0%;
+       }
+
+       div.c.left-1 div:nth-child(3) {
+           left: 100%;
+       }
+
+       div.c.left-2 div:nth-child(1) {
+           left: -200%;
+       }
+
+       div.c.left-2 div:nth-child(2) {
+           left: -100%;
+       }
+
+       div.c.left-2 div:nth-child(3) {
+           left: 0%;
+       }
+   </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="c left-0">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+    <script>
+        var now = 0;
+
+        $('#next').click(function() {
+            now = ( now + 1 ) % 3;
+            $('div.c').removeClass('left-0 left-1 left-2');
+            $('div.c').addClass('left-' + now);
+        });
+
+        $('#prev').click(function() {
+            now = Math.abs(( now - 1 ) % 3);
+            $('div.c').removeClass('left-0 left-1 left-2');
+            $('div.c').addClass('left-' + now);
+        });
+    </script>
+</body>
+</html>
