@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Time Convert</title>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+    <meta name="viewport" content="maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=0" />
+</head>
+<body>
+
+<div data-role="page">
+
+    <div data-role="header">
+        <h1>Time Converter</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <form>
+            <label for="seconds">Seconds</label>
+            <input type="text" name="name" id="seconds" data-mini="true" />
+
+            <label for="minutes">Minutes</label>
+            <input type="text" name="name" id="minutes" data-mini="true" />
+
+            <label for="hours">Hours</label>
+            <input type="text" name="name" id="hours" data-mini="true" />
+        </form>
+    </div><!-- /content -->
+
+</div><!-- /page -->
+
+
+    <script>
+
+        function update(time_in_seconds) {
+            var time_in_minutes = time_in_seconds / 60;
+            var time_in_hours = time_in_seconds / 3600;
+
+            $('#seconds').val( time_in_seconds );
+            $('#minutes').val( time_in_minutes );
+            $('#hours').val( time_in_hours );
+        }
+
+
+        function seconds_changed( ) {
+            var time_in_seconds = $('#seconds').val();
+            update( time_in_seconds );
+        }
+
+        function minutes_changed ( ) {
+            var time_in_minutes = $('#minutes').val();
+            var time_in_seconds = Number( time_in_minutes )  * 60;
+
+            update( time_in_seconds );
+        }
+
+        function hours_changed ( ) {
+            var time_in_hours   = $('#hours').val();
+            var time_in_seconds = time_in_hours * 3600;
+
+            update( time_in_seconds );
+        }
+
+
+        $('input').on('input', function( ev ) {
+
+            ev.preventDefault();
+            ev.stopPropagation();
+
+            if ( this.getAttribute('id') === 'seconds' ) {
+                seconds_changed();
+            } else if ( this.getAttribute('id') === 'minutes') {
+                minutes_changed();
+            } else if ( this.getAttribute('id') === 'hours') {
+                hours_changed();
+            }
+
+        });
+
+
+    </script>
+</body>
+</html>
