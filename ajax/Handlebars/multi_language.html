@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Multi Language</title>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta6/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <meta charset='utf8' />
+</head>
+<body>
+    <div id='main'></div>
+
+    <script type="text-template" id="tmpl-content">
+        <form>
+            <label for="lang">{{lang}}</label>
+            <select id="lang">
+                <option value='en'>En</option>
+                <option value='he'>He</option>
+            </select>
+        </form>
+        <p>{{p}}</p>
+    </script>
+
+    <script>
+        texts = {
+            he: {
+                lang: 'בחר שפה',
+                p: 'גנן גידל דגן בגן'
+            },
+
+            en: {
+                lang: 'Choose Language',
+                p: 'How much wood would a woodchuck chuck if a woodchuck could chuck wood'
+            }
+        };
+
+        function languageChanged() {
+            var lang = $('option:selected').val();
+            setLanguage( lang );
+        }
+
+        function setLanguage( lang ) {
+            var data = texts[lang];
+            var html = $('#tmpl-content').html();
+
+            var template = Handlebars.compile( html );
+            var result = template( data );
+            $('div#main').html( result );
+
+            var $selected = $('select option[value="' + lang + '"]');
+            $selected.attr('selected', 'selected');
+
+            $('form select').on('change', languageChanged);
+        }
+
+        $(function() {
+            setLanguage( 'en' );
+        });
+
+    </script>
+</body>
+</html>

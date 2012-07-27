@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+
+    <meta name="viewport" content="maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=0" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+    <style>
+        #canvas {
+            width:80%;
+            height:100px;
+            border:5px solid black;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div data-role='page'>
+        <div data-role='header'>
+            <h1>Color</h1>
+        </div>
+
+        <div data-role='content'>
+            <form>
+                <div data-role='field-contain'>
+                    <label for='bgcolor' class='select'>Select Color</label>
+                    <select id='bgcolor'>
+                        <option value='red'>Red</option>
+                        <option value='yellow'>Yellow</option>
+                        <option value='purple'>Purple</option>
+                    </select>
+                </div>
+            </form>
+
+            <div id='canvas'></div>
+        </div>
+    </div>
+
+    <script>
+
+        $('form').on('change', function( ev ) {
+            var $selected = $('option:selected');
+            var color = $selected.val();
+
+            $('#canvas').css('background', color);
+
+            localStorage.color = color;
+        });
+
+        $(function() {
+            var color = localStorage.color;
+
+            if ( color ) {
+                $('#canvas').css('background', color);
+
+                $selected = $('option[value="' + color + '"]');
+                $selected.attr('selected', 'selected');
+                $('select').selectmenu('refresh');
+            } else {
+                $('#canvas').css('background', 'red');
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Audio BOard</title>
+    <meta name="viewport" content="maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=0" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+    <script src="js/jquery.imagesloaded.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js"></script>
+
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Audio Board</h1>
+        </div>
+
+        <div class='container' data-role='content'>
+            <div class="box" data-animal="dog">
+                <img src="images/cute-puppy.jpg" />
+            </div>
+
+            <div class="box" data-animal="cow">
+                <img src="images/20070528_cow.jpg" />
+            </div>
+
+            <div class="box" data-animal="cat">
+                <img src="images/animals_cats_small1.jpg" />
+            </div>
+
+            <div class="box" data-animal="bee">
+                <img src="images/florida-bee-control.jpg" />
+            </div>
+
+            <div class="box" data-animal="frog">
+                <img src="images/frog-1.jpg" />
+            </div>
+
+        </div>
+    </div>
+
+    <audio id="audio-dog" src="audio/dog.mp3" />
+    <audio id="audio-cow" src="audio/Cow-moo.mp3" />
+    <audio id="audio-cat" src="audio/wildcat.mp3" />
+    <audio id="audio-bee" src="audio/bee.mp3" />
+    <audio id="audio-frog" src="audio/frog.mp3" />
+
+    <script>
+        var $container = $('.container');
+
+        $container.imagesLoaded( function(){
+            $container.masonry({
+                itemSelector : '.box'
+            });
+        });
+
+        $('.box').on('click', function() {
+            var animal = $(this).attr('data-animal');
+            var audio = document.querySelector('#audio-' + animal);
+            audio.play();
+        });
+    </script>
+</body>
+</html>
