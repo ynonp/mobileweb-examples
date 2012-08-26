@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1" />
+    <title>Where am I</title>
+</head>
+<body>
+    <a id="maplink" href="https://maps.google.com/maps?q=%D7%9B%D7%99%D7%9B%D7%A8+%D7%94%D7%91%D7%99%D7%9E%D7%94,+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91+%D7%99%D7%A4%D7%95,+%D7%99%D7%A9%D7%A8%D7%90%D7%9C&hl=iw&ie=UTF8&sll=32.087932,34.797246&sspn=0.168416,0.220757&oq=%D7%9B%D7%99%D7%9B%D7%A8+%D7%94%D7%91%D7%99&hq=%D7%9B%D7%99%D7%9B%D7%A8+%D7%94%D7%91%D7%99%D7%9E%D7%94,&hnear=%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91+%D7%99%D7%A4%D7%95,+%D7%99%D7%A9%D7%A8%D7%90%D7%9C&t=m&z=15&iwloc=A">Map</a>
+
+<script>
+
+    function success( pos ) {
+        var url = "http://maps.google.com/?" +
+                "saddr=" + pos.coords.latitude + ',' + pos.coords.longitude +
+                "&daddr=%D7%9B%D7%99%D7%9B%D7%A8+%D7%94%D7%91%D7%99%D7%9E%D7%94,+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91+%D7%99%D7%A4%D7%95,+%D7%99%D7%A9%D7%A8%D7%90%D7%9C";
+
+        document.querySelector('#maplink').setAttribute('href', url);
+    }
+
+    function error( err ) {
+        alert(err.code + ':' + err.message);
+    }
+
+    if ( navigator.geolocation ) {
+        navigator.geolocation.getCurrentPosition( success, error, {
+            enableHighAccuracy: true
+        });
+    }
+
+
+
+</script>
+</body>
+</html>
