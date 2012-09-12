@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pong Game</title>
+    <style>
+        @-webkit-keyframes p1 {
+            0% {
+                top:10px;
+            }
+
+            20% {
+                -webkit-transform:translate(0, 80px);
+            }
+
+            50% {
+                -webkit-transform:translate(0, 120px);
+            }
+
+            80% {
+                -webkit-transform:translate(0, 80px);
+            }
+
+            100% {
+                -webkit-transform:translate(0, 10px);
+            }
+        }
+
+
+        @-webkit-keyframes ball {
+            0% {
+                left:35px;
+                top:20px;
+            }
+
+            25% {
+                left:200px;
+                top:120px;
+            }
+
+            50% {
+                left:475px;
+                top:50px;
+            }
+
+            75% {
+                left:200px;
+                top:120px;
+            }
+
+            100% {
+                left:35px;
+                top:20px;
+            }
+        }
+
+        .player {
+            width:20px;
+            height:100px;
+            background: blue;
+            position: absolute;
+        }
+
+        #ball {
+            width:20px;
+            height:20px;
+            border-radius: 10px;
+            background: red;
+            position: absolute;
+            left:35px;
+            top:20px;
+            -webkit-animation: ball 2s infinite;
+        }
+
+        #left {
+            left:10px;
+            top: 10px;
+            -webkit-animation: p1 2s infinite;
+        }
+
+        #right {
+            right:10px;
+            top:10px;
+            -webkit-animation: p1 2s 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="left" class="player"></div>
+    <div id="ball"></div>
+    <div id="right" class="player"></div>
+</body>
+</html>

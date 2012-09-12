@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bouncing Ball Example</title>
+
+    <style>
+        @-webkit-keyframes bounce {
+            0% {
+                -webkit-transform:translate(0, 0);
+            }
+
+            33% {
+                -webkit-transform:translate(0, 100px);
+            }
+
+            100% {
+                -webkit-transform:translate(0, 0);
+            }
+        }
+        #ball {
+            width:100px;
+            height:100px;
+            border-radius:50px;
+            background: red;
+            -webkit-animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+</body>
+</html>

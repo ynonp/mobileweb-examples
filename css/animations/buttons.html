@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buttons Slide Example</title>
+    <link rel="stylesheet" href="ui.css" />
+    <style>
+        #container {
+            width:300px;
+            margin:0 auto;
+        }
+        #container div {
+            padding:20px;
+            -webkit-transition:all 0.5s;
+        }
+
+        .css3btn {
+            min-width: 120px;
+        }
+
+        .hidden {
+            -webkit-transform:translate(-100%, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="hidden">
+            <button class="css3btn">One</button>
+        </div>
+        <div class="hidden">
+            <button class="css3btn">Two</button>
+        </div>
+        <div class="hidden">
+            <button class="css3btn">Three</button>
+        </div>
+    </div>
+
+    <script>
+        var btns = document.querySelectorAll('div.hidden');
+
+        var make_function = function(i) {
+            return function() {
+                btns[i].setAttribute('class', '');
+            }
+        };
+
+        for ( var i=0; i < 3; i++ ) {
+            setTimeout(make_function(i),  500 * i);
+        }
+
+
+        /*
+        for ( var i=0; i < 3; i++ ) {
+            setTimeout(function() {
+                btns[i].setAttribute('class', '');
+            }, i * 500);
+        }
+        */
+
+
+    </script>
+</body>
+</html>

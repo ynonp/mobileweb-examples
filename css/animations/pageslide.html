@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Page Transition</title>
+    <style>
+        body { margin:0; padding: 0; width:100%;overflow: hidden;}
+        #container {
+            width:200%;
+            overflow:hidden;
+        }
+       .page {
+           position:absolute;
+           width:100%;
+           height:300px;
+       }
+       .animated {
+           -webkit-transition: all 2s;
+       }
+       .right {
+           -webkit-transform:translate(100%, 0);
+       }
+       .left {
+           -webkit-transform:translate(-100%, 0);
+       }
+    </style>
+</head>
+<body>
+
+<div id="container">
+
+    <div id="page1" class="page" style="background: blue;">
+        <button id="btn-next">Next</button>
+    </div>
+    <div id="page2" class="page right" style="background: orange;">
+        <button id="btn-prev">Previous</button>
+    </div>
+</div>
+
+<script>
+    var next  = document.querySelector('#btn-next');
+    var prev  = document.querySelector('#btn-prev');
+    var page1 = document.querySelector('.page:nth-child(1)');
+    var page2 = document.querySelector('.page:nth-child(2)');
+
+    var slide = function(page1, page2) {
+        page1.setAttribute('class', 'page left animated');
+        page2.setAttribute('class', 'page animated');
+        setTimeout(function() {
+            page1.setAttribute('class', 'page right');
+            page2.setAttribute('class', 'page');
+        }, 2000);
+    };
+
+    next.addEventListener('click', function() {
+        slide(page1, page2);
+    });
+
+    prev.addEventListener('click', function() {
+        slide(page2, page1);
+    });
+</script>
+</body>
+</html>
