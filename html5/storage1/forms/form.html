@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Form</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>טופס הרשמה</h1>
+    </div>
+    <div data-role="content">
+        <form style="direction: rtl;">
+            <div>
+                <label for="username">שם מלא</label>
+                <input type="text" id="username" />
+            </div>
+            <div>
+                <label for="web">אתר אינטרנט</label>
+                <input type="url" id="web" />
+            </div>
+            <div>
+                <label for="phone">מספר טלפון</label>
+                <input type="tel" id="phone" />
+            </div>
+            <div>
+                <input type="submit" value="שלח" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="persist.js"></script>
+</body>
+</html>
