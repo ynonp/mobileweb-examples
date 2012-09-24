@@ -1,0 +1,8 @@
+LocalStorage Forms Example
+==========================
+
+This example demonstrates how to store form data in localStorage so it 
+will be available for the user next time she accesses your website.
+
+The example is explained in an accompanying screencast located at:
+
