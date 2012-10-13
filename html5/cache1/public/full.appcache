@@ -10,5 +10,5 @@ images/perldancer.jpg
 javascripts/jquery.js
 javascripts/app.js
 
-NETWORK
-time
+FALLBACK:
+time offline.html

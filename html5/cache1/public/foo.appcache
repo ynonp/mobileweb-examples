@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # Offline app cache
-# v. 1.3
+# v. 1.5
 
 index.html
 css/style.css
@@ -8,3 +8,4 @@ images/perldancer-bg.jpg
 images/perldancer.jpg
 javascripts/jquery.js
 javascripts/app.js
+

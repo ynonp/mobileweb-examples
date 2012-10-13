@@ -36,7 +36,10 @@
     }
 
     function success(position) {
-        var latlng = new ns.LatLng(position.coords.latitude, position.coords.longitude);
+        var latlng = new ns.LatLng(
+            position.coords.latitude,
+            position.coords.longitude);
+
         map.setCenter(latlng);
         map.setZoom(17);
         drawCircleMark(latlng, position.coords.accuracy, "#0072f9");
@@ -51,7 +54,7 @@
             case err.TIMEOUT:
             case err.POSITION_UNAVAILABLE:
                 alert('Position failed. This can happen if you are indoors');
-                breakk;
+                break;
 
             default:
                 alert('Unknown Error Occurred');
@@ -60,18 +63,18 @@
 
     function refreshLocation() {
         if ( typeof window.navigator.geolocation !== 'undefined' ) {
-            window.navigator.geolocation.getCurrentPosition(success, error,
-                                                            {
-                                                                enableHighAccuracy: true
-                                                            });
+            window.navigator.geolocation.getCurrentPosition(
+                success,
+                error,
+                {
+                    enableHighAccuracy: false
+                });
         }
     }
 
     $('document').ready(function() {
         init();
-
         $('#btn-find').click(refreshLocation);
-
     });
 
 

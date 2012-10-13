@@ -1,3 +1,5 @@
 www:
   type: nodejs
   approot: exnode
+  config:
+    node_version: v0.8.x

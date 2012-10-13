@@ -4,26 +4,40 @@
         <title>jQM Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1">
 
-	<link rel="stylesheet" href="styles/jquery.mobile-1.0rc1.min.css" />
-	<script type="text/javascript" src="scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/jquery.mobile-1.0rc1.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
     </head>
 
-    <body> 
-    
+    <body>
         <div data-role="page" id="foo">
         
-	    <div data-role="header">
-		<h1>Foo</h1>
-	    </div>
-	    
-	    <div data-role="content">	
-		<p>I'm first in the source order so I'm shown as the page.</p>		
-	    </div>
-	    
-	    <div data-role="footer">
-		<h4>Page Footer</h4>
-	    </div>
+            <div data-role="header">
+                <h1>Foo</h1>
+            </div>
+
+            <div data-role="content">
+                <p>I'm first in the source order so I'm shown as the page.</p>
+                <a href="#bar">Go To Bar</a>
+            </div>
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div>
+        </div>
+
+        <div data-role="page" id="bar" data-add-back-btn="true">
+            <div data-role="header">
+                <h1>Bar</h1>
+            </div>
+
+            <div data-role="content">
+                <p>Second Page</p>
+            </div>
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div>
         </div>
     </body>
 </html>

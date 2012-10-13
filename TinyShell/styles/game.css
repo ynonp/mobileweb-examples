@@ -1,8 +1,8 @@
 @-webkit-keyframes flash-up-down {
-    0%   { top: 0; }
-    40%  { top: -35px; }
-    70%  { top: -35px; }
-    100% { top: 0; }
+    0% { -webkit-transform:translate(0, 0) }
+    40% { -webkit-transform:translate(0, -100px)}
+    70% { -webkit-transform:translate(0, -120px)}
+    100% { -webkit-transform:translate(0,0)}
 }
 
 @-webkit-keyframes move-right-1 {
