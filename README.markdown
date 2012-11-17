@@ -12,8 +12,8 @@ For other materials and slides.
 
 To clone the examples, use:
 
-  git clone git@github.com:ynonp/mobileweb-examples.git
-  git submodule init
-  git submodule update
+    git clone git@github.com:ynonp/mobileweb-examples.git
+    git submodule init
+    git submodule update
 
 
