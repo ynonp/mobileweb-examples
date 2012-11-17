@@ -1,0 +1,3 @@
+[submodule "apps/picpaint/lib/SimplePicker"]
+	path = apps/picpaint/lib/SimplePicker
+	url = https://github.com/tonyhursh/SimplePicker.git
