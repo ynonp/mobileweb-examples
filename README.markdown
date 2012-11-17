@@ -4,8 +4,7 @@ In the course you'll learn how to write responsive web sites and
 mobile web applications.
 
 This repository holds all class examples for the course. Do check
-http://mobileweb.ynonperek.com
-
+http://mobileweb.ynonperek.com     
 For other materials and slides.
 
 ## Installation
