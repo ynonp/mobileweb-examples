@@ -4,12 +4,49 @@
     <title>PicPaint Ultimate</title>
     <meta name="viewport" content="width=320, user-scalable=0" />
 
+    <link href="lib/dhgamache-Skeleton-7ab6820/stylesheets/base.css" rel="stylesheet" />
     <link href="lib/spectrum/spectrum.css" rel="stylesheet" />
 
     <style>
+        label {
+            display: inline;
+        }
+
+        body {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+
+        header {
+            background: rgb(180,227,145); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(180,227,145,1) 0%, rgba(97,196,25,1) 50%, rgba(180,227,145,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(180,227,145,1)), color-stop(50%,rgba(97,196,25,1)), color-stop(100%,rgba(180,227,145,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 ); /* IE6-9 */
+            padding:8px;
+            height:30px;
+        }
+
+        footer {
+            background: rgb(180,227,145); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(180,227,145,1) 0%, rgba(97,196,25,1) 50%, rgba(180,227,145,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(180,227,145,1)), color-stop(50%,rgba(97,196,25,1)), color-stop(100%,rgba(180,227,145,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 ); /* IE6-9 */
+            padding:10px;
+            height: 30px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
         .viewport {
             width:320px;
-            height: 480px;
+            height: 400px;
             overflow: hidden;
             position: relative;
         }
@@ -31,8 +68,7 @@
 
         <div class="page current" id="main">
             <header>
-                <label for="inp-snap">Snap</label>
-                <input type="file" accept="image/*" id="inp-snap" />
+                <input type="file" id="inp-snap" />
             </header>
 
             <div class="content">
@@ -40,16 +76,16 @@
             </div>
 
             <footer>
-                <a href="#" class="btn" id="btn-save">Save</a>
-                <a href="#" class="btn" id="btn-restore">Restore</a>
-                <a href="#" class="btn" id="btn-color">Color</a>
+                <a href="#" class="button" id="btn-save">Save</a>
+                <a href="#" class="button" id="btn-restore">Restore</a>
+                <a href="#" class="button" id="btn-color">Color</a>
             </footer>
 
         </div>
 
         <div class="page right" id="color">
             <header>
-                <a href="#" class="btn" id="btn-back">Back</a>
+                <a href="#" class="button" id="btn-back">Back</a>
             </header>
             <div class="content">
                 <canvas id="huewell" width="200" height="20">></canvas><p />

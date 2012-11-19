@@ -58,10 +58,12 @@
                 var img = new Image();
                 img.onload = function(){
                     canvas.width = canvas.width;
-                    self.ctx.drawImage(img,0,0);
-                }
+
+                    var factor = canvas.width / img.width;
+                    self.ctx.drawImage(img,0,0, img.width * factor, img.height * factor );
+                };
                 img.src = event.target.result;
-            }
+            };
             reader.readAsDataURL(file_change_event.target.files[0]);
         };
 
