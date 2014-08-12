@@ -41,7 +41,7 @@ function tokenHandler (result) {
 function onNotificationAPN (event) {
     if ( event.alert )
     {
-        navigator.notification.alert(event.alert);
+        $('#app-status-ul').append("<li>" + event.alert + "</li>");
     }
 
     if ( event.sound )

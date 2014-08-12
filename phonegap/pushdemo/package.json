@@ -1,0 +1,7 @@
+{
+  "name": "test_push",
+  "description": "testing push notifications",
+  "dependencies": {
+    "apn": "^1.6.0"
+  }
+}
