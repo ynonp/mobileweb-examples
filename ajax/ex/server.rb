@@ -2,6 +2,12 @@ require 'sinatra'
 require 'json'
 
 set :public_folder, File.dirname(__FILE__) + "/static"
+set :bind, '0.0.0.0'
+
+before do
+  response['Access-Control-Allow-Origin'] = '*'
+end
+
 
 post '/ex1/login' do
     content_type :json
