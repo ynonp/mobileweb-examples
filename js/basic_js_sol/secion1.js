@@ -51,7 +51,7 @@ function sol4() {
             console.log(i);
         }
     } else {
-        for ( i=39; i > n; i -= 2 ) {
+        for ( i=39; i > n; i -= 1 ) {
             console.log(i);
         }
     }
