@@ -34,7 +34,7 @@ function sol2() {
 function sol3() {
     var n = Math.floor(Math.random() * 100);
 
-    for ( var i=40; i < n; i += 1 ) {
+    for ( var i=41; i < n; i += 2 ) {
         console.log(i);
     }
 }
